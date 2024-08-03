@@ -8,6 +8,7 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/bin/batterysecret:$(TARGET_COPY_OUT_VENDOR)/bin/batterysecret \
     vendor/xiaomi/lisa/proprietary/vendor/bin/init.qcom.sensors.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sensors.sh \
+    vendor/xiaomi/lisa/proprietary/vendor/bin/loadalgo:$(TARGET_COPY_OUT_VENDOR)/bin/loadalgo \
     vendor/xiaomi/lisa/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
     vendor/xiaomi/lisa/proprietary/vendor/bin/sscrpcd:$(TARGET_COPY_OUT_VENDOR)/bin/sscrpcd \
     vendor/xiaomi/lisa/proprietary/vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb \
@@ -56,11 +57,13 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/beauty_style_pink.cng:$(TARGET_COPY_OUT_VENDOR)/etc/camera/beauty_style_pink.cng \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/beauty_style_skin_gloss.cng:$(TARGET_COPY_OUT_VENDOR)/etc/camera/beauty_style_skin_gloss.cng \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/bokehParams.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/bokehParams.json \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/cache:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cache \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/com.xiaomi.dcal.wu.fake:$(TARGET_COPY_OUT_VENDOR)/etc/camera/com.xiaomi.dcal.wu.fake \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/com.xiaomi.dcal.wu.golden:$(TARGET_COPY_OUT_VENDOR)/etc/camera/com.xiaomi.dcal.wu.golden \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/com.xiaomi_k9_mecp.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/com.xiaomi_k9_mecp.bin \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/com.xiaomi_k9_mecp_for_nocali.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/com.xiaomi_k9_mecp_for_nocali.bin \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/det_quantize.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/det_quantize.dlc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/eisoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/eisoverridesettings.txt \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/hdrcheckerparamsettings.yml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hdrcheckerparamsettings.yml \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/intsense_config_optical_zoom_2sat.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/intsense_config_optical_zoom_2sat.bin \
@@ -68,10 +71,25 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/miai_hdr_config.yaml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/miai_hdr_config.yaml \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/mibokeh_855_opencl.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mibokeh_855_opencl.bin \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/mibokeh_855_parameter.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mibokeh_855_parameter.bin \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model/dof_model/capture_cache:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model/dof_model/capture_cache \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model/dof_model/capture_model:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model/dof_model/capture_model \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model/dof_model/capture_policy:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model/dof_model/capture_policy \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model/rt_model/preview_cache:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model/rt_model/preview_cache \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model/rt_model/preview_model:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model/rt_model/preview_model \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model/rt_model/preview_policy:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model/rt_model/preview_policy \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model1:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model1 \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model2:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model2 \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model3:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model3 \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model4:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model4 \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model_ai_dxo.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model_ai_dxo.dlc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model_back.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model_back.dlc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model_front.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model_front.dlc \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/model_glass.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model_glass.dlc \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/para_ini_cal_w_u_0.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/para_ini_cal_w_u_0.bin \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/para_ini_verify_w_u_0.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/para_ini_verify_w_u_0.bin \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/person_det_dsp.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/person_det_dsp.dlc \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/person_reid_gpu.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/person_reid_gpu.dlc \
+    vendor/xiaomi/lisa/proprietary/vendor/etc/camera/preview_bokeh_params.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/preview_bokeh_params.json \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/pureShot_parameter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/pureShot_parameter.xml \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/pureView_parameter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/pureView_parameter.xml \
     vendor/xiaomi/lisa/proprietary/vendor/etc/camera/reid_float.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/reid_float.dlc \
@@ -263,6 +281,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/lib/libsndmonitor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsndmonitor.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/libssrec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssrec.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/libvideoNS.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoNS.so \
+    vendor/xiaomi/lisa/proprietary/vendor/lib/rfsa/adsp/bm2n06.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/bm2n06.bin \
+    vendor/xiaomi/lisa/proprietary/vendor/lib/rfsa/adsp/bm2n08.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/bm2n08.bin \
+    vendor/xiaomi/lisa/proprietary/vendor/lib/rfsa/adsp/bm2n13.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/bm2n13.bin \
+    vendor/xiaomi/lisa/proprietary/vendor/lib/rfsa/adsp/bm2n14.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/bm2n14.bin \
+    vendor/xiaomi/lisa/proprietary/vendor/lib/rfsa/adsp/bm2n15.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/bm2n15.bin \
     vendor/xiaomi/lisa/proprietary/vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib/rfsa/adsp/libMIAIHDR_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libMIAIHDR_skel.so \
@@ -509,9 +532,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libhdrdynamic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdrdynamic.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libhdrdynamicootf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdrdynamicootf.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libhexagon_controller.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhexagon_controller.so \
+    vendor/xiaomi/lisa/proprietary/vendor/lib64/libhta.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhta.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libipebpsstriping.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libipebpsstriping.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libipebpsstriping170.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libipebpsstriping170.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libjpege.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjpege.so \
+    vendor/xiaomi/lisa/proprietary/vendor/lib64/libloadalgo_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloadalgo_stub.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libmctfengine_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmctfengine_stub.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libmegface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmegface.so \
     vendor/xiaomi/lisa/proprietary/vendor/lib64/libmiStereoFactoryRemapBasicLib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiStereoFactoryRemapBasicLib.so \
